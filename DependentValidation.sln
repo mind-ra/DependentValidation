@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependentValidation.Test", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C46DC89-D479-472F-93F9-7788A3165673}"
 	ProjectSection(SolutionItems) = preProject
-		foolproof.unobstrusive.js = foolproof.unobstrusive.js
+		dependentvalidation.unobstrusive.js = dependentvalidation.unobstrusive.js
 		README.md = README.md
 	EndProjectSection
 EndProject
