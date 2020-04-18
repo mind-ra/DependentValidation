@@ -1,5 +1,5 @@
-var foolproof = function () { };
-foolproof.is = function (value1, operator, value2, passOnNull) {
+var dependentValidation = function () { };
+dependentValidation.is = function (value1, operator, value2, passOnNull) {
     if (passOnNull === 'true' || passOnNull === 'True') {
         var isNullish = function (input) {
             return input == null || input == undefined || input == '';
@@ -55,31 +55,31 @@ foolproof.is = function (value1, operator, value2, passOnNull) {
     return false;
 };
 
-foolproof.getId = function (element, dependentProperty) {
+dependentValidation.getId = function (element, dependentProperty) {
     var pos = element.id.lastIndexOf('_') + 1;
     return element.id.substr(0, pos) + dependentProperty.replace(/\./g, '_');
 };
 
-foolproof.getName = function (element, dependentProperty) {
+dependentValidation.getName = function (element, dependentProperty) {
     var pos = element.name.lastIndexOf('.') + 1;
     return element.name.substr(0, pos) + dependentProperty;
 };
 
 (function () {
     jQuery.validator.addMethod('is', function (value, element, params) {
-        var dependentProperty = foolproof.getId(element, params['dependentproperty']);
+        var dependentProperty = dependentValidation.getId(element, params['dependentproperty']);
         var operator = params['operator'];
         var passOnNull = String(params['passonnull']).toLowerCase();
         var dependentValue = document.getElementById(dependentProperty).value;
 
-        if (foolproof.is(value, operator, dependentValue, passOnNull))
+        if (dependentValidation.is(value, operator, dependentValue, passOnNull))
             return true;
 
         return false;
     });
 
     jQuery.validator.addMethod('requiredif', function (value, element, params) {
-        var dependentProperty = foolproof.getName(element, params['dependentproperty']);
+        var dependentProperty = dependentValidation.getName(element, params['dependentproperty']);
         var expectedValue = params['expectedvalue'];
         var operator = params['operator'];
         var pattern = params['pattern'];
@@ -99,7 +99,7 @@ foolproof.getName = function (element, dependentProperty) {
         else if (dependentPropertyElement.length)
             dependentValue = dependentPropertyElement[0].value;
 
-        if (dependentValue && foolproof.is(dependentValue, operator, expectedValue)) {
+        if (dependentValue && dependentValidation.is(dependentValue, operator, expectedValue)) {
             if (pattern == null) {
                 if (value != null && value.toString().replace(/^\s\s*/, '').replace(/\s\s*$/, '') != '')
                     return true;
@@ -114,7 +114,7 @@ foolproof.getName = function (element, dependentProperty) {
     });
 
     jQuery.validator.addMethod('requiredifempty', function (value, element, params) {
-        var dependentProperty = foolproof.getId(element, params['dependentproperty']);
+        var dependentProperty = dependentValidation.getId(element, params['dependentproperty']);
         var dependentValue = document.getElementById(dependentProperty).value;
 
         if (dependentValue == null || dependentValue.toString().replace(/^\s\s*/, '').replace(/\s\s*$/, '') == '') {
@@ -128,7 +128,7 @@ foolproof.getName = function (element, dependentProperty) {
     });
 
     jQuery.validator.addMethod('requiredifnotempty', function (value, element, params) {
-        var dependentProperty = foolproof.getId(element, params['dependentproperty']);
+        var dependentProperty = dependentValidation.getId(element, params['dependentproperty']);
         var dependentValue = document.getElementById(dependentProperty).value;
 
         if (dependentValue != null && dependentValue.toString().replace(/^\s\s*/, '').replace(/\s\s*$/, '') != '') {
