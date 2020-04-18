@@ -2,31 +2,32 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Angelo Rotta</Authors>
     <Company />
-    <Description>DependentValidation is a .netstandard2.0 library that extends the System.ComponentModel.DataAnnotations with conditional attributes based on another property of the validated object.
+    <Description>
+      DependentValidation is a netstandard2.0 library that extends the System.ComponentModel.DataAnnotations with conditional attributes based on another property of the validated object.
 
-The new attributes are the following:
+      The new attributes are the following:
 
-- RequiredIf
-- RequiredIfEmpty
-- RequiredIfFalse
-- RequiredIfNot
-- RequiredIfNotEmpty
-- RequiredIfNotRegExMatch
-- RequiredIfRegExMatch
-- RequiredIfTrue
-- RegularExpressionIf
-- Is
-- EqualTo
-- GreaterThan
-- GreaterThanOrEqualTo
-- LessThan
-- LessThanOrEqualTo
-- NotEqualTo</Description>
-    <PackageTags>validation, dependent validation, conditional validation</PackageTags>
-    <Version>1.0.0</Version>
+      - RequiredIf
+      - RequiredIfEmpty
+      - RequiredIfFalse
+      - RequiredIfNot
+      - RequiredIfNotEmpty
+      - RequiredIfNotRegExMatch
+      - RequiredIfRegExMatch
+      - RequiredIfTrue
+      - RegularExpressionIf
+      - Is
+      - EqualTo
+      - GreaterThan
+      - GreaterThanOrEqualTo
+      - LessThan
+      - LessThanOrEqualTo
+      - NotEqualTo
+    </Description>
+    <PackageTags>validation, dependent, conditional, requiredif, greaterthan, lessthan</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
