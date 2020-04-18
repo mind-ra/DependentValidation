@@ -1,6 +1,6 @@
-# Foolproof Validation
+# DependentValidation
 
-Foolproof Validation is a .netstandard2.0 library that extends the System.ComponentModel.DataAnnotations with conditional attributes based on another property of the validated object.
+DependentValidation is a .netstandard2.0 library that extends the System.ComponentModel.DataAnnotations with conditional attributes based on another property of the validated object.
 
 The new attributes are the following:
 
@@ -23,4 +23,4 @@ The new attributes are the following:
 
 ### Installation
 
-Foolproof is on NuGet
+DependentValidation is on NuGet
