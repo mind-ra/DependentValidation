@@ -28,7 +28,7 @@ The new attributes are the following:
 DependentValidation is on [NuGet](https://www.nuget.org/packages/DependentValidation/)
 
 ``` powershell
-Install-Package Bogus
+Install-Package DependentValidation
 ```
 Minimum Requirements: **.NET Standard 2.0**.
 
