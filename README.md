@@ -28,7 +28,7 @@ The new attributes are the following:
 DependentValidation is on [NuGet](https://www.nuget.org/packages/DependentValidation/)
 
 ``` powershell
-Install-Package Dependent-Validation
+Install-Package DependentValidation
 ```
 Minimum Requirements: **.NET Standard 2.0**.
 
@@ -40,6 +40,6 @@ Inside this project there is a small js file, [dependentvalidation.unobstrusive.
 
 This project is based on [foolproof](https://github.com/leniel/foolproof), which I used extensively in my Asp.Net MVC projects.
 
-Going forward developing projects whit .Net Core, I felt the need of a Foolproof like library, but what I found is too much complex for my needs.
+Going forward developing projects with .Net Core, I felt the need of a Foolproof like library, but what I found is too much complex for my needs.
 
 So I decided to try and give back something to the Open Source Community.
