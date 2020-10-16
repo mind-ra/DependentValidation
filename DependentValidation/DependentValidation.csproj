@@ -27,7 +27,7 @@
       - NotEqualTo
     </Description>
     <PackageTags>validation, dependent, conditional, requiredif, greaterthan, lessthan</PackageTags>
-    <Version>1.2.1</Version>
+    <Version>1.2.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
