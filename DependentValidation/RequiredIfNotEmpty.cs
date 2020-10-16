@@ -45,7 +45,7 @@ namespace DependentValidation
         {
             MergeAttribute(context.Attributes, "data-val", "true");
             MergeAttribute(context.Attributes, "data-val-requiredifnotempty", FormatErrorMessage(context.ModelMetadata.GetDisplayName()));
-            MergeAttribute(context.Attributes, "data-val-requiredif-dependentproperty", DependentProperty.ToString()); ;
+            MergeAttribute(context.Attributes, "data-val-requiredifnotempty-dependentproperty", DependentProperty.ToString()); ;
         }
     }
 }
